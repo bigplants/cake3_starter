@@ -1,0 +1,9 @@
+.DS_STORE
+.vagrant
+/vendor
+/config/app.php
+/tmp
+/logs
+/.idea
+/plugins
+/composer.lock
