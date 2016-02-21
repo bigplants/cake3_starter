@@ -16,5 +16,6 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", inline: <<-EOT
             sed -i -e "s%/var/www/public%/var/www/webroot%" /etc/apache2/sites-available/000-default.conf
             /etc/init.d/apache2 restart
+            echo "CREATE DATABASE IF NOT EXISTS my_app" | mysql -uroot -proot
     EOT
 end
